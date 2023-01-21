@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: Blog_App_development
+  pool:
+  username: rails
+  password: 123
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

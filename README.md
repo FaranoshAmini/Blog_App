@@ -1,12 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -38,6 +31,11 @@
 **[Blog_App]** The Blog App is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
+<ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Rails</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Postgres</a></li>
+  </ul>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -156,9 +154,8 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Implement View]**
+- [ ] **[Implement Controller]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

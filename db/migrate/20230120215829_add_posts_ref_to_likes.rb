@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# foreign key
 class AddPostsRefToLikes < ActiveRecord::Migration[7.0]
   def change
     add_reference :likes, :post, null: false, foreign_key: true

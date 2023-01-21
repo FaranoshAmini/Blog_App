@@ -1,4 +1,3 @@
-
 # foreign key
 class AddAuthorRefToLikes < ActiveRecord::Migration[7.0]
   def change

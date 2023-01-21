@@ -8,7 +8,6 @@
 #
 
 require 'rubygems'
-# rubocop:disable Metrics/ClassLength
 m = Module.new do
   module_function
 
@@ -113,6 +112,5 @@ m = Module.new do
 end
 
 m.load_bundler!
-# rubocop:enable Metrics/ClassLength
 
 load Gem.bin_path('bundler', 'bundle') if m.invoked_as_script?

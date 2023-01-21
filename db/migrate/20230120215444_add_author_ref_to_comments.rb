@@ -1,4 +1,3 @@
-
 # foreign key
 class AddAuthorRefToComments < ActiveRecord::Migration[7.0]
   def change

@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 # foreign key
 class AddAuthorRefToComments < ActiveRecord::Migration[7.0]

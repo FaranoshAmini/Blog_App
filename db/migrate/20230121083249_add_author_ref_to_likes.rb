@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 # foreign key
 class AddAuthorRefToLikes < ActiveRecord::Migration[7.0]

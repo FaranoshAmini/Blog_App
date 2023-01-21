@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 # likes
 class CreateLikes < ActiveRecord::Migration[7.0]

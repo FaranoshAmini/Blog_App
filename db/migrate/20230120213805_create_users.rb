@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 # user
 class CreateUsers < ActiveRecord::Migration[7.0]

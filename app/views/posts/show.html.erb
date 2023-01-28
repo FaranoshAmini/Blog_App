@@ -5,7 +5,11 @@
 <p class="footer">Comments: <%=@post.comments_counter %>,
 Likes: <%=@post.likes_counter %></p>
 <p><%=@post.text %></p>
-</div
+</div>
+<%= form_with model: @like, url: :likes do |form| %>
+<%= form.hidden_field  :post_id, value: @post.id %>
+<%= form.submit "like" %>
+<% end %>
 <div>
 <% @comments.each do |comment| %>
     <div class="bio"><%= comment.author.name %>:  <%= comment.text %></div>

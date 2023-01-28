@@ -1,1 +1,22 @@
-<h1>Hello Faranosh, this is the show action in users controller</h1>
+<div class="container">
+<div>
+<div class="image">Images</div>
+<div class="card">
+<h1 class="header"><%=@user.name%></h1>
+<p class="footer">Number of posts: <%=@user.posts_counter %></p>
+</div>
+</div>
+<div class="bio">
+<p>Bio:</p>
+<p><%=@user.bio%></p>
+</div>
+<% @user.recent_posts.each do |post| %>
+<div class="post">
+<p><%=post.title %></p>
+<p><%=post.text %></p>
+<p class="footer">Comments: <%=post.comments_counter %>,
+Likes: <%=post.likes_counter %></p>
+</div>
+<% end %>
+<button class="btn"><a href="/users/<%=@user.id %>/posts">See all posts</a></button>
+</div> 

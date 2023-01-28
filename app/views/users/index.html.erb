@@ -1,1 +1,11 @@
-<h1>This is the index action in users controller</h1>
+<div class="container">
+<% @users.each do |user| %>
+<a href="/users/<%=user.id %>">
+<div class="image">Images</div>
+<div class="card">
+<h1 class="header"><%= user.name%></h1>
+<p class="footer">Number of posts: <%= user.posts_counter %></p>
+</div>
+</a>
+<% end %>
+</div>

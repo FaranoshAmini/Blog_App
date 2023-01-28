@@ -1,8 +1,10 @@
 <div class="container">
+<div>
 <div class="image">Images</div>
 <div class="card">
 <h1 class="header"><%=@user.name %></h1>
 <p class="footer">Number of posts: <%=@user.posts_counter %></p>
+</div>
 </div>
 <% @posts.each do |post| %>
 <div class="post">

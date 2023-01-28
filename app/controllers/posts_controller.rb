@@ -9,4 +9,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comments = Comment.where(post: @post)
   end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @new_post = Post.new(title: params[:post][:title], text: params[:post][:text], author: current_user, comments_counter: 0, likes_counter: 0)
+    if @new_post.save then redirect_to users_path end
+      
+  end
 end

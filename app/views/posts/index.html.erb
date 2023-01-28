@@ -1,1 +1,21 @@
-<h1>This is the index action of PostsController</h1>
+<div class="container">
+<div class="image">Images</div>
+<div class="card">
+<h1 class="header"><%=@user.name %></h1>
+<p class="footer">Number of posts: <%=@user.posts_counter %></p>
+</div>
+<% @posts.each do |post| %>
+<div class="post">
+<p><%=post.title %></p>
+<p><%=post.text %></p>
+<p class="footer">Comments: <%=post.comments_counter %>,
+Likes: <%=post.likes_counter %></p>
+</div>
+<div>
+<% post.recent_comments.each do |comment| %>
+ <div class="bio"><%= comment.author.name %>:  <%= comment.text %></div>
+<% end %>
+</div>
+<% end %>
+<button class="btn"><a href="">Pagination</a></button>
+<div>

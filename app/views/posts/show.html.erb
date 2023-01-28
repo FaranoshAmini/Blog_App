@@ -1,1 +1,14 @@
-<h1>This is the show action of PostsController</h1>
+<div class="container">
+<div class="bio">
+<%=@post.title %> by
+<%=@user.name %>
+<p class="footer">Comments: <%=@post.comments_counter %>,
+Likes: <%=@post.likes_counter %></p>
+<p><%=@post.text %></p>
+</div
+<div>
+<% @comments.each do |comment| %>
+    <div class="bio"><%= comment.author.name %>:  <%= comment.text %></div>
+<% end %>    
+<div>
+</div>

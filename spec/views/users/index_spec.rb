@@ -15,7 +15,10 @@ RSpec.describe 'Users index view', type: :system do
      @users.each do |user|
       expect(page).to have_css("img[src*='#{user.photo}']")
      end  
-      
+    it 'Display the number of posts each user has written' do
+     @users.each do |user|
+     expect(page).to have_content("Number of posts: #{user.posts.count}")
+     end
     end
   end
 end

@@ -11,7 +11,10 @@ RSpec.describe 'Users index view', type: :system do
       @users.each do |user|
       expect(page).to have_content(user.name)
       end 
-    
+    it 'Display the profile picture for each user' do
+     @users.each do |user|
+      expect(page).to have_css("img[src*='#{user.photo}']")
+     end  
       
     end
   end

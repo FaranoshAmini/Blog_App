@@ -25,7 +25,7 @@ RSpec.describe 'Users index view', type: :system do
       end
     end
     it 'redirects to the user show page' do
-      visit users_path 
+      visit users_path
       click_link('Lilly', match: :prefer_exact)
       expect(page).to have_content('Bio:')
     end

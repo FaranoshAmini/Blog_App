@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'user/#index', type: :feature do
   before :each do
     @user = User.create(name: 'Lilly', photo: 'https://img.freepik.com/free-vector/floral-card_53876-91231.jpg',
-      bio: 'my bio')
+                        bio: 'my bio')
     visit user_path(@user.id)
   end
   describe 'users show view' do

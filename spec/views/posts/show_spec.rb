@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'user_post/#show', type: :feature do
   before :each do
     @user = User.create(name: 'Lilly', photo: 'https://img.freepik.com/free-vector/floral-card_53876-91231.jpg',
-      bio: 'my bio')
+                        bio: 'my bio')
     @post = @user.posts.new('Title', 'Text and Description')
     visit user_post_path(@user.id, @post.id)
   end

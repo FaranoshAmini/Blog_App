@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Users index view', type: :system do
   describe 'Index page' do
     before(:each) do
-      @first_user = User.create(name: 'Lilly', photo: 'https://img.freepik.com/free-vector/floral-card_53876-91231.jpg',
+      @first_user = User.create(name: 'Lilly', photo: 'https://picsum.photos/200',
                                 bio: 'my bio')
       @second_user = User.create(name: 'Farah',
-                                 photo: 'https://img.freepik.com/free-vector/floral-card_53876-91231.jpg', bio: 'Doctor')
+                                 photo: 'https://picsum.photos/200', bio: 'Doctor')
       @users = User.all
     end
     it 'Display  username of all user\'s' do

@@ -3,30 +3,20 @@ require 'rails_helper'
 RSpec.describe 'Users index view', type: :system do
   describe 'Index page' do
     before(:each) do
-      @first_user = User.create(name: 'Lilly', photo: 'https://picsum.photos/200',
-                                bio: 'my bio')
-      @second_user = User.create(name: 'Farah',
-                                 photo: 'https://picsum.photos/200', bio: 'Doctor')
-      @users = User.all
+      @user = User.create(id: 1, name: 'Farah', photo: 'img.jpg', bio: 'Developer', posts_counter: 0)
+      visit users_path
     end
     it 'Display  username of all user\'s' do
-      @users.each do |user|
-        expect(page).to have_content(user.name)
-      end
+      expect(page).to have_content('Farah')
     end
     it 'Display the profile picture for each user' do
-      @users.each do |user|
-        expect(page).to have_css("img[src*='#{user.photo}']")
-      end
+      expect(page).to have_css("img[src*='img.jpg']")
     end
     it 'Display the number of posts each user has written' do
-      @users.each do |user|
-        expect(page).to have_content("Number of posts: #{user.posts.count}")
-      end
+      expect(page).to have_content('Number of posts: 0')
     end
     it 'redirects to the user show page' do
-      visit users_path
-      click_link('Lilly', match: :prefer_exact)
+      click_link('Farah', match: :prefer_exact)
       expect(page).to have_content('Bio:')
     end
   end

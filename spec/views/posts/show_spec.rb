@@ -4,7 +4,7 @@ RSpec.describe 'user_post/#show', type: :feature do
   before :each do
     @user = User.create(name: 'Farah', photo: 'img.jpg', bio: 'Developer', posts_counter: 0)
     @post = Post.create(title: 'Intro to JS', text: 'Full Stack Development', comments_counter: 0, likes_counter: 0,
-    author: @user)
+                        author: @user)
     @comment = Comment.create(text: 'Awesome', author: @user, post: @post)
     visit user_post_path(@user, @post)
   end

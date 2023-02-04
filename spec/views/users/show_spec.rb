@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe 'user/#index', type: :feature do
   before :each do
     @user = User.create(id: 1, name: 'Lilly', photo: 'https://img.freepik.com/free-vector/floral-card_53876-91231.jpg',
-    bio: 'my bio', posts_counter: 0)
+                        bio: 'my bio', posts_counter: 0)
     @post = Post.create(id: 1, title: 'Intro to JS', text: 'JavaScript is a problem solving language.',
-    comments_counter: 0, likes_counter: 0, author: @user)
+                        comments_counter: 0, likes_counter: 0, author: @user)
     visit user_path(@user)
   end
   describe 'users show view' do
     it 'should show user profile picture' do
-      expect(page).to have_content("Images")
+      expect(page).to have_content('Images')
     end
     it 'should show user username' do
       expect(page).to have_content(@user.name)

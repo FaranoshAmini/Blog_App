@@ -5,12 +5,12 @@ RSpec.describe 'Posts index view', type: :system do
     before(:each) do
       @user = User.create(name: 'Farah', photo: 'img.jpg', bio: 'Developer', posts_counter: 0)
       @post = Post.create(title: 'Intro to JS', text: 'Full Stack Development', comments_counter: 0, likes_counter: 0,
-      author: @user)
+                          author: @user)
       @comment = Comment.create(text: 'Awesome', author: @user, post: @post)
       visit user_posts_path(@user)
     end
     it 'Display the user\'s profile picture' do
-      expect(page).to have_content("Images")
+      expect(page).to have_content('Images')
     end
     it 'Display the user\'s username' do
       expect(page).to have_content(@user.name.to_s)

@@ -16,11 +16,11 @@ RSpec.describe 'Posts index view', type: :system do
       visit user_post_path(@first_user.id)
     end
     it 'Display the user\'s profile picture' do
-       expect(page).to have_css("img[src*=#{@first_user.photo}']")
-    end 
+      expect(page).to have_css("img[src*=#{@first_user.photo}']")
+    end
     it 'Display the user\'s username' do
-     expect(page).to have_content(@first_user.name.to_s)
-    end 
+      expect(page).to have_content(@first_user.name.to_s)
+    end
     it 'Display the number of posts the user has written' do
       expect(page).to have_content("Number of posts: #{@first_user.post_counter}")
     end
@@ -28,10 +28,10 @@ RSpec.describe 'Posts index view', type: :system do
       expect(page).to have_content(@first_post.title.to_s)
     end
     it 'Display the some of the post\'s body' do
-      expect(page).to have_content("#{@first_post.text[0-30]}")
+      expect(page).to have_content(@first_post.text[0 - 30].to_s)
     end
     it 'Display the first comments on a post' do
-       expect(page).to have_content(@first_post.comments.last.text.to_s)
+      expect(page).to have_content(@first_post.comments.last.text.to_s)
     end
     it 'Display how many comments a post has' do
       expect(page).to have_content("Comments: #{@first_post.comments_counter}")
@@ -43,7 +43,7 @@ RSpec.describe 'Posts index view', type: :system do
       expect(page).to have_content('pagination')
     end
     it 'can click on a post, it redirects me to that post\'s show page' do
-      expect("#{page.current_url}/#{@first_post.id}").to match user_post_path(@first_user.id,@first_post.id)
+      expect("#{page.current_url}/#{@first_post.id}").to match user_post_path(@first_user.id, @first_post.id)
     end
   end
 end

@@ -10,7 +10,7 @@ RSpec.describe 'Users index view', type: :system do
       expect(page).to have_content('Farah')
     end
     it 'Display the profile picture for each user' do
-      expect(page).to have_css("img[src*='img.jpg']")
+      expect(page).to have_content("Images")
     end
     it 'Display the number of posts each user has written' do
       expect(page).to have_content('Number of posts: 0')

@@ -45,6 +45,5 @@ RSpec.describe 'Posts index view', type: :system do
     it 'can click on a post, it redirects me to that post\'s show page' do
       expect("#{page.current_url}/#{@first_post.id}").to match user_post_path(@first_user.id,@first_post.id)
     end
-    end
   end
 end
